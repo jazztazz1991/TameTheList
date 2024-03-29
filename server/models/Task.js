@@ -30,7 +30,22 @@ const TaskSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'board',
         required: true
-    }
+    },
+    subtasks: [{
+        name: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        description: {
+            type: String,
+            trim: true
+        },
+        completed: {
+            type: Boolean,
+            required: true
+        }
+    }]
 });
 
 export const TaskModel = mongoose.model('task', TaskSchema);
