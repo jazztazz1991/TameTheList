@@ -24,24 +24,19 @@ const BoardSchema = new mongoose.Schema({
         catergory: [{
             totalTasks: {
                 type: Number,
-                required: true
             },
             subCategories: [{
                 name: {
                     type: String,
-                    required: true
                 },
                 totalTasks: {
                     type: Number,
-                    required: true
                 },
                 avgTime: {
                     type: Number,
-                    required: true
                 },
                 fastestTime: {
                     type: Number,
-                    required: true
                 }
             }]
         }]
