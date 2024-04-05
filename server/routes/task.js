@@ -63,5 +63,15 @@ router.post('/complete', verifyToken, async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+router.post('/subtask/complete', verifyToken, async (req, res) => {
+    try {
+        const task = await TaskModel.findById(req.body.taskId);
+        task.subtasks[req.body.subtaskIndex].completed = true;
+        await task.save();
+        res.status(200).json(task);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 
 export { router as taskRouter };

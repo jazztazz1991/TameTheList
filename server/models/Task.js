@@ -12,11 +12,11 @@ const TaskSchema = new mongoose.Schema({
     },
     dueDate: {
         type: Date,
-        required: true
     },
     priority: {
         type: String,
-        required: true
+        required: true,
+        default: 'low'
     },
     completed: {
         type: Boolean,
@@ -32,6 +32,10 @@ const TaskSchema = new mongoose.Schema({
         ref: 'board',
         required: true
     },
+    assignedTo: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'users'
+    },
     subtasks: [{
         name: {
             type: String,
@@ -43,7 +47,6 @@ const TaskSchema = new mongoose.Schema({
         },
         completed: {
             type: Boolean,
-            required: true,
             default: false
         }
     }]
