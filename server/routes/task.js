@@ -1,8 +1,7 @@
 import express from 'express';
 import { verifyToken } from './users.js';
-import { TaskModel } from '../models/Tasks.js';
-import { BoardModel } from '../models/Boards.js';
-import { UserModel } from '../models/Users.js';
+import { TaskModel } from '../models/Task.js';
+import { BoardModel } from '../models/Board.js';
 
 const router = express.Router();
 

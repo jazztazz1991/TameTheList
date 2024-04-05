@@ -16,6 +16,14 @@ router.post('/create', verifyToken, async (req, res) => {
             household: household._id,
             members: household.members
         });
+        for (const member of household.members) {
+            const user = await UserModel.findById(member);
+            user.boards.push(board._id);
+            await user.save();
+        }
+        household.boards.push(board._id);
+        await household.save();
+        res.status(201).json(board);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -23,15 +31,16 @@ router.post('/create', verifyToken, async (req, res) => {
 
 router.get('/allByUser', verifyToken, async (req, res) => {
     try {
-        const board = await BoardModel.find({ members: req.user.id });
-        res.status(200).json(board);
+        console.log(req.user.id)
+        const user = await UserModel.findById(req.user.id).populate('boards');
+        res.status(200).json(user.boards);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
 router.get('/allByHousehold', verifyToken, async (req, res) => {
     try {
-        const household = await HouseholdModel.findById(req.household.id).populate('boards');
+        const household = await HouseholdModel.findById(req.body.householdId).populate('boards');
         res.status(200).json(household.boards);
     } catch (error) {
         res.status(500).json({ error: error.message });

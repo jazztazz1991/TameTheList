@@ -32,7 +32,7 @@ router.get('/all', verifyToken, async (req, res) => {
 
 router.get('/:id', verifyToken, async (req, res) => {
     try {
-        const household = await HouseholdModel.findById(req.params.id).populate('members');
+        const household = await HouseholdModel.findById(req.params.id)
         res.status(200).json(household);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -75,7 +75,7 @@ router.delete('/:id', verifyToken, async (req, res) => {
         const user = await UserModel.findById(req.user.id);
         user.households = user.households.filter(household => household.toString() !== req.params.id);
         await user.save();
-        await household.remove();
+        await household.deleteOne({ _id: req.params.id });
         res.status(200).json({ message: 'Household deleted' });
     } catch (error) {
         res.status(500).json({ error: error.message });
