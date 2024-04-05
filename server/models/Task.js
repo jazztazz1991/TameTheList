@@ -20,7 +20,8 @@ const TaskSchema = new mongoose.Schema({
     },
     completed: {
         type: Boolean,
-        required: true
+        required: true,
+        default: false
     },
     dateCreated: {
         type: Date,
@@ -34,7 +35,6 @@ const TaskSchema = new mongoose.Schema({
     subtasks: [{
         name: {
             type: String,
-            required: true,
             trim: true
         },
         description: {
@@ -43,7 +43,8 @@ const TaskSchema = new mongoose.Schema({
         },
         completed: {
             type: Boolean,
-            required: true
+            required: true,
+            default: false
         }
     }]
 });
