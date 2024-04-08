@@ -33,7 +33,7 @@ router.post('/login', async (req, res) => {
             return res.status(404).json({ error: 'E-Mail or Password is incorrect' });
         }
         const token = jwt.sign({ id: user._id }, process.env.SECRET);
-        res.status(200).json({ token });
+        res.status(200).json({ token, user: { name: user.name, email: user.email, lastLoggedIn: user.lastLoggedIn, id: user._id } });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
