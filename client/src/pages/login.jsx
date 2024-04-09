@@ -9,7 +9,10 @@ export const Login = () => {
 	const [user, setUser] = useState({});
 	const [lastLogin, setLastLogin] = useState(null);
 	const navigate = useNavigate();
-	const [email, setEmail] = useState('');
+	const [userInfo, setUserInfo] = useState({
+		email: '',
+		password: '',
+	});
 	const [password, setPassword] = useState('');
 
 	useEffect(() => {
@@ -19,23 +22,23 @@ export const Login = () => {
 		}
 	}, [cookies]);
 
+	const handleChange = (event) => {
+        const { name, value } = event.target;
+		console.log(name, value);
+        setUserInfo({ ...userInfo, [name]: value });
+    }
+
 	const login = async (e) => {
 		e.preventDefault();
 		try {
 			const res = await instance.post('/auth/login', {
-				email,
-				password,
+				userInfo
 			});
-			if (res.response.status === 500) {
-				console.log('Invalid username or password');
-				return;
-			}
 
 			if (res.data.user.lastLoggedIn < Date.now() - 604800000) {
 				console.log('User logged in within the last week');
 			}
-			console.log(res.data);
-			setCookie('user', res.data, { path: '/' });
+			setCookie('user', res.data, { path: '/', maxAge: 43200 });
 			navigate('/');
 		} catch (error) {
 			if (error.response.status === 500) {
@@ -61,13 +64,13 @@ export const Login = () => {
 						type='text'
 						placeholder='E-Mail'
 						className='p-2 rounded-md shadow-md'
-						onChange={(event) => setEmail(event.target.value)}
+						onChange={handleChange}
 					/>
 					<input
 						type='password'
 						placeholder='Password'
 						className='p-2 rounded-md shadow-md'
-						onChange={(event) => setPassword(event.target.value)}
+						onChange={handleChange}
 					/>
 					<button
 						type='submit'

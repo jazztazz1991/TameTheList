@@ -9,7 +9,13 @@ export const Register = () => {
 	const [user, setUser] = useState({});
 	const [lastLogin, setLastLogin] = useState(null);
 	const navigate = useNavigate();
-	const [email, setEmail] = useState('');
+	const [userInfo, setUserInfo] = useState({
+		name: '',
+		email: '',
+		username: '',
+		password: '',
+		birthday: '',
+	});
 	const [password, setPassword] = useState('');
 
 	useEffect(() => {
@@ -19,28 +25,25 @@ export const Register = () => {
 		}
 	}, [cookies]);
 
-	const login = async (e) => {
+	const handleChange = (event) => {
+        const { name, value } = event.target;
+		console.log(name, value);
+        setUserInfo({ ...userInfo, [name]: value });
+    }
+
+	const register = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await instance.post('/auth/login', {
-				email,
-				password,
+			const res = await instance.post('/auth/register', {
+				userInfo
 			});
-			if (res.response.status === 500) {
-				console.log('Invalid username or password');
-				return;
-			}
 
-			if (res.data.user.lastLoggedIn < Date.now() - 604800000) {
-				console.log('User logged in within the last week');
-			}
 			console.log(res.data);
-			setCookie('user', res.data, { path: '/' });
-			navigate('/');
+			navigate('/login');
 		} catch (error) {
 			if (error.response.status === 500) {
 				const eMsg = document.querySelector('h2');
-				eMsg.textContent = 'Invalid username or password';
+				eMsg.textContent = 'Please fill out all required fields';
 				eMsg.style.color = 'red';
 				return;
 			} else {
@@ -56,35 +59,50 @@ export const Register = () => {
 					Login
 				</h1>
 				<h2></h2>
-				<form className='grid grid-cols-1 gap-4' onSubmit={login}>
+				<form className='grid grid-cols-1 gap-4' onSubmit={register}>
+					<input
+						type='text'
+						placeholder='Full Name'
+						name='name'
+						className='p-2 rounded-md shadow-md'
+						onChange={handleChange}
+					/>
 					<input
 						type='text'
 						placeholder='E-Mail'
+						name='email'
 						className='p-2 rounded-md shadow-md'
-						onChange={(event) => setEmail(event.target.value)}
+						onChange={handleChange}
+					/>
+					<input
+						type='text'
+						placeholder='Username'
+						name='username'
+						className='p-2 rounded-md shadow-md'
+						onChange={handleChange}
 					/>
 					<input
 						type='password'
 						placeholder='Password'
+						name='password'
 						className='p-2 rounded-md shadow-md'
-						onChange={(event) => setPassword(event.target.value)}
+						onChange={handleChange}
 					/>
+					<input
+						type='date'
+						placeholder='Birthday'
+						name='birthday'
+						className='p-2 rounded-md shadow-md'
+						onChange={handleChange}
+					/>
+
 					<button
 						type='submit'
 						className='bg-blue-light p-2 rounded-md shadow-md'
 					>
-						Login
+						Register
 					</button>
 				</form>
-				<p className='text-white text-center'>
-					Not a user?{' '}
-					<Link
-						to='/register'
-						className='underline text-white hover:text-purple'
-					>
-						Register
-					</Link>
-				</p>
 			</div>
 		</div>
 	);

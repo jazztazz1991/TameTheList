@@ -7,27 +7,32 @@ const router = express.Router();
 
 router.post('/register', async (req, res) => {
     try {
-        const { name, username, email, password, birthday } = req.body;
+        const { name, username, email, password, birthday } = req.body.userInfo;
+        console.log("line 11: " + name, username, email, password, birthday);
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = await UserModel.create({
             name,
             username,
             email,
             password: hashedPassword,
-            birthday,
-            currentListType: 'checkbox'
+            birthday
         });
+        console.log("line 21: " + user);
         res.status(201).json(user);
     } catch (error) {
+        console.log("line 24: " + error.message)
         res.status(500).json({ error: error.message });
     }
 });
 
 router.post('/login', async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, password } = req.body.userInfo;
+        console.log(email, password);
         const user = await UserModel.findOne({ email });
+        console.log(user);
         const isPasswordValid = await bcrypt.compare(password, user.password);
+        console.log(isPasswordValid);
 
         if (!user || !isPasswordValid) {
             return res.status(404).json({ error: 'E-Mail or Password is incorrect' });

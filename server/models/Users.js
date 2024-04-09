@@ -43,7 +43,7 @@ const UserSchema = new mongoose.Schema({
     },
     currentListType: {
         type: String,
-        required: true
+        default: 'checkbox'
     }
 
 });
