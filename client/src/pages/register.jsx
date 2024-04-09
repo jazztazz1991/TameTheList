@@ -4,7 +4,7 @@ import '../index.css';
 import { useCookies } from 'react-cookie';
 import instance from '../hooks/API.js';
 
-export const Login = () => {
+export const Register = () => {
 	const [cookies, setCookie, removeCookie] = useCookies(['user']);
 	const [user, setUser] = useState({});
 	const [lastLogin, setLastLogin] = useState(null);

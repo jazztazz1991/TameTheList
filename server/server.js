@@ -12,12 +12,7 @@ import { boardRouter } from './routes/board.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const path = require("path");
-
-
-
 dotenv.config();
-app.use(express.static(path.join(__dirname, "dist")));
 
 const app = express();
 
