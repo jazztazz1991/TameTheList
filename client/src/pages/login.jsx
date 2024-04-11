@@ -13,7 +13,6 @@ export const Login = () => {
 		email: '',
 		password: '',
 	});
-	const [password, setPassword] = useState('');
 
 	useEffect(() => {
 		if (cookies.user) {
@@ -23,16 +22,15 @@ export const Login = () => {
 	}, [cookies]);
 
 	const handleChange = (event) => {
-        const { name, value } = event.target;
-		console.log(name, value);
-        setUserInfo({ ...userInfo, [name]: value });
-    }
+		const { name, value } = event.target;
+		setUserInfo({ ...userInfo, [name]: value });
+	};
 
 	const login = async (e) => {
 		e.preventDefault();
 		try {
 			const res = await instance.post('/auth/login', {
-				userInfo
+				userInfo,
 			});
 
 			if (res.data.user.lastLoggedIn < Date.now() - 604800000) {
@@ -63,12 +61,14 @@ export const Login = () => {
 					<input
 						type='text'
 						placeholder='E-Mail'
+						name='email'
 						className='p-2 rounded-md shadow-md'
 						onChange={handleChange}
 					/>
 					<input
 						type='password'
 						placeholder='Password'
+						name='password'
 						className='p-2 rounded-md shadow-md'
 						onChange={handleChange}
 					/>

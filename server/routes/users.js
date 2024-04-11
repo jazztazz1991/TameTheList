@@ -28,11 +28,8 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body.userInfo;
-        console.log(email, password);
         const user = await UserModel.findOne({ email });
-        console.log(user);
         const isPasswordValid = await bcrypt.compare(password, user.password);
-        console.log(isPasswordValid);
 
         if (!user || !isPasswordValid) {
             return res.status(404).json({ error: 'E-Mail or Password is incorrect' });

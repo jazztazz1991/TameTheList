@@ -16,7 +16,6 @@ export const Register = () => {
 		password: '',
 		birthday: '',
 	});
-	const [password, setPassword] = useState('');
 
 	useEffect(() => {
 		if (cookies.user) {
@@ -26,19 +25,16 @@ export const Register = () => {
 	}, [cookies]);
 
 	const handleChange = (event) => {
-        const { name, value } = event.target;
-		console.log(name, value);
-        setUserInfo({ ...userInfo, [name]: value });
-    }
+		const { name, value } = event.target;
+		setUserInfo({ ...userInfo, [name]: value });
+	};
 
 	const register = async (e) => {
 		e.preventDefault();
 		try {
 			const res = await instance.post('/auth/register', {
-				userInfo
+				userInfo,
 			});
-
-			console.log(res.data);
 			navigate('/login');
 		} catch (error) {
 			if (error.response.status === 500) {
