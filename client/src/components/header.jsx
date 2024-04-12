@@ -49,7 +49,7 @@ export const Header = () => {
 							Home
 						</Link>
 						<Link
-							to='/'
+							to='/dashboard'
 							className='bg-blue-light rounded px-2 mx-2 w-fit shadow-md shadow-cyan-500/50'
 						>
 							Boards
