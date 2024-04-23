@@ -12,7 +12,9 @@ export const Boards = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await instance.get('/board/allByUser', { cookies });
+				const response = await instance.get('/board/allByUser', {
+					headers: { authorizations: cookies.user.token },
+				});
 				setBoards(response.data);
 			} catch (error) {
 				console.error(error);
