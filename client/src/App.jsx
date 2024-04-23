@@ -8,6 +8,7 @@ import { Login } from './pages/login.jsx';
 import { Register } from './pages/register.jsx';
 import { Dashboard } from './pages/dashboard.jsx';
 import { Boards } from './pages/boards.jsx';
+import { Board } from './pages/board.jsx';
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Route path='/register' element={<Register />} />
 				<Route path='/dashboard' element={<Dashboard />} />
 				<Route path='/boards' element={<Boards />} />
+				<Route path='/boards/:id' element={<Board />} />
 
 				{/* <Route path="/boards" element={<Boards />} />
         <Route path="/profile" element={<Profile />} /> */}
