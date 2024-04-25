@@ -7,7 +7,9 @@ const router = express.Router();
 
 router.post('/create', verifyToken, async (req, res) => {
     try {
-        const { name, boardId, description, priority } = req.body;
+        console.log(req.body)
+        const { name, boardId, description, priority } = req.body.task;
+        console.log(name, boardId, description, priority)
         const board = await BoardModel.findById(boardId);
         const task = await TaskModel.create({
             name,
@@ -15,6 +17,7 @@ router.post('/create', verifyToken, async (req, res) => {
             description: description || '',
             priority: priority || 'low'
         });
+        console.log(task)
         board.tasks.push(task._id);
         await board.save();
         task.save();
