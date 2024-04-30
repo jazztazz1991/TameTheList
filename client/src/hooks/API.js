@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3001';
-// const baseUrl = '';
+// const baseUrl = 'http://localhost:3001';
+const baseUrl = 'https://tamethelist.onrender.com';
 
 const instance = axios.create({
     baseURL: baseUrl,
