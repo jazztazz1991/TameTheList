@@ -135,11 +135,11 @@ export const Board = () => {
 					</div>
 				</div>
 			</div>
-			<div className='grid grid-cols-7 gap-2'>
+			<div className='grid grid-cols-7 gap-2 md:grid-cols-4 sm:grid-cols-1'>
 				{tasks.map((task) => (
 					<div
 						key={task._id}
-						className='bg-slate-600 p-5 rounded-lg shadow-lg text-center'
+						className='bg-slate-600 p-5 rounded-lg shadow-lg text-center w-72'
 					>
 						<p className='text-purple-300 bg-yellow-800 rounded-full w-fit px-3 mx-auto'>
 							{task.priority}
