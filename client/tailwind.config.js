@@ -5,6 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens:{
+      'sm': {'min':'0px', 'max': '639px'},
+      'md': '639px'
+    },
     extend: {
       colors: {
         'purple-c': '#6e57a5',
