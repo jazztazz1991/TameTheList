@@ -29,6 +29,7 @@ router.post('/create', verifyToken, async (req, res) => {
 router.get('/allByBoard/:boardId', verifyToken, async (req, res) => {
     try {
         const board = await BoardModel.findById(req.params.boardId).populate('tasks');
+        console.log(board.tasks)
         res.status(200).json(board.tasks);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -60,6 +61,25 @@ router.post('/complete', verifyToken, async (req, res) => {
     try {
         const task = await TaskModel.findById(req.body.taskId);
         task.completed = true;
+        if (task.repeated) {
+            switch (task.repeatTime) {
+                case 'daily':
+                    task.dueDate = new Date(task.dueDate.getTime() + 86400000);
+                    break;
+                case 'weekly':
+                    task.dueDate = new Date(task.dueDate.getTime() + 604800000);
+                    break;
+                case 'monthly':
+                    console.log(new Date(task.dueDate.getTime()))
+                    console.log(new Date(task.dueDate.getTime() + 2592000000))
+                    task.dueDate = new Date(task.dueDate.getTime() + 2592000000);
+                    break;
+                case 'yearly':
+                    task.dueDate = new Date(task.dueDate.getTime() + 31536000000);
+                    break;
+            }
+            task.completed = false;
+        }
         await task.save();
         res.status(200).json(task);
     } catch (error) {

@@ -36,6 +36,15 @@ const TaskSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users'
     },
+    repeated: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
+    repeatTime: {
+        type: String,
+        default: 'daily'
+    },
     subtasks: [{
         name: {
             type: String,

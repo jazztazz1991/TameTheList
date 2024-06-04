@@ -8,7 +8,6 @@ const router = express.Router();
 router.post('/register', async (req, res) => {
     try {
         const { name, username, email, password, birthday } = req.body.userInfo;
-        console.log("line 11: " + name, username, email, password, birthday);
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = await UserModel.create({
             name,
@@ -17,10 +16,8 @@ router.post('/register', async (req, res) => {
             password: hashedPassword,
             birthday
         });
-        console.log("line 21: " + user);
         res.status(201).json(user);
     } catch (error) {
-        console.log("line 24: " + error.message)
         res.status(500).json({ error: error.message });
     }
 });

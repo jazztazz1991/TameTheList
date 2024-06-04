@@ -12,6 +12,7 @@ export const Board = () => {
 		description: '',
 		priority: 'low',
 		boardId: '',
+		dueDate: '',
 	});
 	const [board, setBoard] = useState('Board');
 	const [cookies, setCookie, removeCookie] = useCookies(['user']);
@@ -55,6 +56,16 @@ export const Board = () => {
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 		setTask({ ...task, [name]: value });
+	};
+
+	const completeTask = async (currentTask) => {
+		console.log(currentTask);
+		const response = await instance.post(
+			'/task/complete',
+			{ taskId: currentTask._id },
+			{ headers: { authorizations: cookies.user.token } }
+		);
+		console.log(response.data);
 	};
 
 	return (
@@ -148,11 +159,18 @@ export const Board = () => {
 							{task.name}
 						</h3>
 						<p className='text-purple-300'>{task.description}</p>
+						<p className='text-purple-300 mt-5'>{task.dueDate}</p>
 						<button
 							className='bg-blue-light rounded-full px-2 mx-2 w-fit shadow-md shadow-cyan-500/50 text-'
 							onClick={() => navigate(`/tasks/${task._id}`)}
 						>
 							View Task
+						</button>
+						<button
+							className='bg-blue-light rounded-full px-2 mx-2 w-fit shadow-md shadow-cyan-500/50 text-'
+							onClick={() => completeTask(task)}
+						>
+							Complete Task
 						</button>
 					</div>
 				))}
