@@ -27,7 +27,14 @@ export const Board = () => {
 				headers: { authorizations: cookies.user.token },
 			});
 			console.log(response.data);
-			setTasks(response.data);
+			let newTasks = [];
+			response.data.forEach((taskData) => {
+				if (taskData.completed === false) {
+					newTasks.push(taskData);
+				}
+			});
+			console.log(newTasks);
+			setTasks(newTasks);
 		};
 		const getBoard = async () => {
 			const response = await instance.get(`/board/${params.id}`, {
@@ -40,6 +47,20 @@ export const Board = () => {
 		getTasks();
 	}, []);
 
+	const refreshTasks = async () => {
+		const response = await instance.get(`/task/allByBoard/${params.id}`, {
+			headers: { authorizations: cookies.user.token },
+		});
+		console.log(response.data);
+		let newTasks = [];
+		response.data.forEach((taskData) => {
+			if (taskData.completed === false) {
+				newTasks.push(taskData);
+			}
+		});
+		setTasks(newTasks);
+	};
+
 	function toggleModal() {
 		document.getElementById('modal').classList.toggle('hidden');
 	}
@@ -51,6 +72,7 @@ export const Board = () => {
 			{ headers: { authorizations: cookies.user.token } }
 		);
 		console.log(response.data);
+		refreshTasks();
 	};
 
 	const handleChange = (event) => {
@@ -66,6 +88,7 @@ export const Board = () => {
 			{ headers: { authorizations: cookies.user.token } }
 		);
 		console.log(response.data);
+		refreshTasks();
 	};
 
 	return (
