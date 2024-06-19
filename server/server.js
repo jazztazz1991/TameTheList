@@ -9,7 +9,7 @@ import { householdRouter } from './routes/household.js';
 import { taskRouter } from './routes/task.js';
 import { boardRouter } from './routes/board.js';
 
-const __filename = fileURLToPath(import.meta.url);
+const __filename = fileURLToPath(import.meta.url);``
 const __dirname = path.dirname(__filename);
 
 dotenv.config();
@@ -25,7 +25,7 @@ app.use('/task', taskRouter);
 app.use('/board', boardRouter);
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/build')));
+    app.use(express.static(path.join(__dirname, '../client/dist')));
 }
 
 app.get('/', (req, res) => {
