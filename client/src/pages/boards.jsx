@@ -4,6 +4,8 @@ import '../index.css';
 import { useCookies } from 'react-cookie';
 import instance from '../hooks/API.js';
 
+import AddBoard from '../components/modals/addBoard.jsx';
+
 export const Boards = () => {
 	const [boards, setBoards] = useState([]);
 	const navigate = useNavigate();
@@ -28,6 +30,7 @@ export const Boards = () => {
 			<h1 className='text-xl font-bold text-blue-light text-center my-5'>
 				Boards
 			</h1>
+			<AddBoard />
 			<div className='grid grid-cols-4 gap-4'>
 				{boards.map((board) => (
 					<div
