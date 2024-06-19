@@ -10,6 +10,7 @@ import { Dashboard } from './pages/dashboard.jsx';
 import { Boards } from './pages/boards.jsx';
 import { Board } from './pages/board.jsx';
 
+
 function App() {
 	return (
 		<Router>

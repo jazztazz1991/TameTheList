@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../index.css';
 import { useCookies } from 'react-cookie';
 import instance from '../hooks/API.js';
+import { GoogleLogin } from '@react-oauth/google';
 
 export const Login = () => {
 	const [cookies, setCookie, removeCookie] = useCookies(['user']);
@@ -78,6 +79,7 @@ export const Login = () => {
 					>
 						Login
 					</button>
+					<GoogleLogin onSuccess={(user) => console.log(user)} onError={console.log("Google Login Failed")} />
 				</form>
 				<p className='text-white text-center'>
 					Not a user?{' '}
