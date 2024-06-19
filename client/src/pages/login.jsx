@@ -3,6 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../index.css';
 import { useCookies } from 'react-cookie';
 import instance from '../hooks/API.js';
+import { GoogleLogin, googleLogout } from '@react-oauth/google';
+import createOrGetUser from '../utils/index.js';
+
+
 
 export const Login = () => {
 	const [cookies, setCookie, removeCookie] = useCookies(['user']);
@@ -50,12 +54,13 @@ export const Login = () => {
 		}
 	};
 
-	return (
+	return (			
 		<div className='grid place-items-center h-full mt-24'>
 			<div className='bg-slate-600 p-5 rounded-lg shadow-lg'>
 				<h1 className='text-white text-3xl font-bold text-center pb-5'>
 					Login
 				</h1>
+				
 				<h2></h2>
 				<form className='grid grid-cols-1 gap-4' onSubmit={login}>
 					<input
@@ -78,6 +83,15 @@ export const Login = () => {
 					>
 						Login
 					</button>
+					<div>
+						{user ? (
+							<div>Logged In</div>
+						) : (
+							<GoogleLogin 
+							onSuccess={(response) => createOrGetUser(response)}
+							onError={() => console.log('Error')} />
+						)}
+					</div>					
 				</form>
 				<p className='text-white text-center'>
 					Not a user?{' '}

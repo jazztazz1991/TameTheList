@@ -1,5 +1,6 @@
 // import { useState } from 'react'
 import './App.css';
+import dotenv from 'dotenv';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/header.jsx';
 import { Footer } from './components/footer.jsx';
@@ -9,9 +10,12 @@ import { Register } from './pages/register.jsx';
 import { Dashboard } from './pages/dashboard.jsx';
 import { Boards } from './pages/boards.jsx';
 import { Board } from './pages/board.jsx';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
 
 function App() {
 	return (
+		<GoogleOAuthProvider clientId={`${process.env.REACT_APP_NEXT_PUBLIC_GOOGLE_API_TOKEN}`}>
 		<Router>
 			<Header />
 			<Routes>
@@ -27,6 +31,7 @@ function App() {
 			</Routes>
 			<Footer />
 		</Router>
+		</GoogleOAuthProvider>
 	);
 }
 

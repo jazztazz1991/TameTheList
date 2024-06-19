@@ -26,6 +26,18 @@ router.post('/register', async (req, res) => {
     }
 });
 
+router.post('/api/auth/google', (req, res) => {
+    console.log("This is running")
+    const { token } = req.body;
+  //  const decoded = jwt.verify(token, process.env.SECRET);
+    if (!token) {
+        return res.status(400).json({ message: 'A token is required for authentication'});
+    }
+    const payload = { googleToken: token };
+    const jwtToken = jwt.sign(payload, process.env.SECRET, { expiresIn: '1h' });
+    res.status(200).json({ message: 'Authentication successful', jwt: jwtToken });
+});
+
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body.userInfo;
