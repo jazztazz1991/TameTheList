@@ -15,6 +15,7 @@ export const Header = () => {
 		if (cookies.user) {
 			setUser(cookies.user);
 			setLastLogin(cookies.user.lastLoggedIn);
+			navigate('/boards');
 		}
 	}, [cookies]);
 
