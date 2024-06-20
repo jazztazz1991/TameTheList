@@ -53,7 +53,7 @@ export default function GithubLogin() {
   }
 
   return (
-    <Wrapper>
+
       <section className="container">
         <div>
           <h1>Welcome</h1>
@@ -84,6 +84,5 @@ export default function GithubLogin() {
           </div>
         </div>
       </section>
-    </Wrapper>
   );
 }
