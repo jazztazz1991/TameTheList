@@ -1,16 +1,26 @@
 import { useCookies } from 'react-cookie';
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import Cookies from 'js-cookie';
 export const Home1 = () => {
-	const [cookies, setCookie, removeCookie] = useCookies(['user']);
+	const [cookies, getCookie, removeCookie] = useCookies(['user']);
 	const [user, setUser] = useState({});
+	const navigate = useNavigate();
 	useEffect(() => {
 		if (cookies.user) {
 			setUser(cookies.user);
 		}
 	}, [cookies]);
 	
+	useEffect(() => {
+		const accessToken = Cookies.get("access_token");
+	
+		if (!accessToken) {
+		  navigate("/");
+		}
+
+	  }, [cookies, navigate]);
+
 	return (
 		<div className='grid grid-cols-2 w-4/5 mx-auto'>
 			<div className='my-5 text-center text-cyan-200 my-auto'>
@@ -20,7 +30,7 @@ export const Home1 = () => {
 				<h2 className='text-lg font-semibold'>
 					One list, endless views. Conquer your day!
 				</h2>
-{!cookies.user ? (
+{!cookies.user && !cookies.accessToken ? (
 				<div className='grid grid-cols-3 mx-auto w-fit'>
 					<input
 						type='email'
@@ -32,7 +42,7 @@ export const Home1 = () => {
 						Register Now
 					</Link>
 				</div>
-				): (
+				) : (
 					<Link to='/boards'
 					
 						className='bg-blue-light p-2 rounded-md shadow-md text-slate-800 m-2 w-fit mx-auto'
