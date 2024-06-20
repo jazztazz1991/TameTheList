@@ -8,7 +8,7 @@ const router = express.Router();
 router.post('/create', verifyToken, async (req, res) => {
     try {
         console.log(req.body)
-        const { name, boardId, description, priority } = req.body.task;
+        const { name, boardId, description, priority } = req.body;
         console.log(name, boardId, description, priority)
         const board = await BoardModel.findById(boardId);
         const task = await TaskModel.create({
