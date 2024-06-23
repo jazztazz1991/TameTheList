@@ -42,6 +42,11 @@ router.post('/login', async (req, res) => {
     }
 });
 
+router.post('/test', async (req, res) => {
+    console.log(req.body);
+    res.status(200).json({ msg: 'Success' });
+})
+
 export { router as usersRouter };
 
 export const verifyToken = (req, res, next) => {

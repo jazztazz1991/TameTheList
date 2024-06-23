@@ -9,10 +9,10 @@ const __dirname = dirname(__filename);
 dotenv.config({ path: `${__dirname}/../.env` });
 
 export const config = {
-  client_id: process.env.REACT_APP_CLIENT_ID,
-  client_secret: process.env.REACT_APP_CLIENT_SECRET,
-  redirect_uri: process.env.REACT_APP_REDIRECT_URI,
-  proxy_url: process.env.REACT_APP_PROXY_URL,
+  client_id: process.env.CLIENT_ID,
+  client_secret: process.env.CLIENT_SECRET,
+  redirect_uri: process.env.REDIRECT_URI,
+  proxy_url: process.env.PROXY_URL,
 };
 
 export const envVarsSchema = Joi.object({

@@ -37,24 +37,35 @@ app.use((req, res, next) => {
 });
 
 app.post("/authenticate", (req, res) => {
+  console.log(req.body)
   const { code } = req.body;
-
-  const data = new FormData();
-  data.append("client_id", client_id);
-  data.append("client_secret", client_secret);
-  data.append("code", code);
-  data.append("redirect_uri", redirect_uri);
-
+  console.log(code)
+  // const data = new FormData();
+  // data.append("client_id", client_id);
+  // data.append("client_secret", client_secret);
+  // data.append("code", code);
+  // data.append("redirect_uri", redirect_uri);
+  const data = {
+    client_id: client_id,
+    client_secret: client_secret,
+    code: code,
+    redirect_uri: redirect_uri,
+  }
+  console.log(data)
   // Request to exchange code for an access token
-  fetch(`https://github.com/login/oauth/access_token`, {
-    method: "POST",
-    body: data,
+  fetch(`https://github.com/login/oauth/access_token&client_id=${client_id}&client_secret=${client_secret}&code=${code}`, {
+    method: "POST"
   })
-    .then((response) => response.text())
+    .then((response) => {
+      console.log(response)
+      return response.text()
+    })
     .then((paramsString) => {
       let params = new URLSearchParams(paramsString);
+      console.log(params)
       const access_token = params.get("access_token");
-
+      console.log('================================')
+      console.log(paramsString)
       // Request to return data of a user that has been authenticated
       return fetch(`https://api.github.com/user`, {
         headers: {
@@ -64,6 +75,8 @@ app.post("/authenticate", (req, res) => {
     })
     .then((response) => response.json())
     .then((response) => {
+      console.log('================================')
+      console.log(response)
       return res.status(200).json(response);
     })
     .catch((error) => {
@@ -71,15 +84,15 @@ app.post("/authenticate", (req, res) => {
     });
 });
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/build')));
+  app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/'));
+  res.sendFile(path.join(__dirname, '../client/'));
 })
 
 mongoose.connect(process.env.DB_LINK);
 
 if (process.env.PORT) {
-    app.listen(process.env.PORT, () => console.log("SERVER STARTED!"));
+  app.listen(process.env.PORT, () => console.log("SERVER STARTED!"));
 }
