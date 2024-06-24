@@ -69,9 +69,9 @@ Tame the List is your one-stop shop for conquering your tasks, no matter your pr
 
 ## Tame the List is Perfect For:
 
-- [ ] \*Visual Thinkers:\*\* Kanban boards let you see your progress at a glance.
-- [ ] List Lovers:\*\* Classic checklist view keeps you on track.
-- [ ] Gamers with a Goal:\*\* Race against the clock and earn that sweet dopamine rush from completing even the most tedious tasks.
+- \*Visual Thinkers:\*\* Kanban boards let you see your progress at a glance.
+- \*List Lovers:\*\* Classic checklist view keeps you on track.
+- \*Gamers with a Goal:\*\* Race against the clock and earn that sweet dopamine rush from completing even the most tedious tasks.
 
 ### Stop Taming the List, Start Taming Your Day. Sign Up Today!
 
