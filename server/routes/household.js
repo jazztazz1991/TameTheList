@@ -23,7 +23,7 @@ router.post('/create', verifyToken, async (req, res) => {
 
 router.get('/all', verifyToken, async (req, res) => {
     try {
-        const user = await UserModel.findById(req.user.id).populate('households');
+        const user = await UserModel.findById(req.user.user._id).populate('households');
         res.status(200).json(user.households);
     } catch (error) {
         res.status(500).json({ error: error.message });

@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import passportLocalMongoose from 'passport-local-mongoose';
+
 
 const UserSchema = new mongoose.Schema({
     name: {
@@ -47,5 +49,7 @@ const UserSchema = new mongoose.Schema({
     }
 
 });
+
+UserSchema.plugin(passportLocalMongoose);
 
 export const UserModel = mongoose.model('users', UserSchema);

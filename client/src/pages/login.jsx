@@ -4,8 +4,8 @@ import '../index.css';
 import { useCookies } from 'react-cookie';
 import instance from '../hooks/API.js';
 import axios from 'axios';
-import GLogin from '../components/GLogin.jsx';
-import GithubLogin from '../components/GitHubLogin.jsx';
+// import GLogin from '../components/GLogin.jsx';
+// import GithubLogin from '../components/GitHubLogin.jsx';
 import GoogleAuth from '../components/GoogleAuthTest/googleauth.jsx';
 export const Login = () => {
 	const [cookies, setCookie, removeCookie] = useCookies(['user']);
@@ -32,10 +32,10 @@ export const Login = () => {
 	const login = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await instance.post('/auth/login', {
+			const res = await instance.post('/auth/jwtLogin', {
 				userInfo,
 			});
-
+			console.log(res);
 			if (res.data.user.lastLoggedIn < Date.now() - 604800000) {
 				console.log('User logged in within the last week');
 			}
@@ -52,8 +52,6 @@ export const Login = () => {
 			}
 		}
 	};
-
-
 	return (
 		<div className='grid place-items-center h-full mt-24'>
 			<div className='bg-slate-600 p-5 rounded-lg shadow-lg'>
@@ -82,10 +80,12 @@ export const Login = () => {
 					>
 						Login
 					</button>
-					<GoogleAuth />
-					<GithubLogin />
+					<p>some text</p>
+
 					{/* <GoogleLogin onSuccess={(user) => console.log(user)} onError={console.log("Google Login Failed")} /> */}
 				</form>
+				<GoogleAuth />
+				{/* <GithubLogin /> */}
 				<p className='text-white text-center'>
 					Not a user?{' '}
 					<Link

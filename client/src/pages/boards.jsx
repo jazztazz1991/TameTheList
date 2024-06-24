@@ -9,13 +9,14 @@ import AddBoard from '../components/modals/addBoard.jsx';
 export const Boards = () => {
 	const [boards, setBoards] = useState([]);
 	const navigate = useNavigate();
-	const [cookies, setCookies] = useCookies(['user']);
+	const [cookies, setCookies] = useCookies(['jwt']);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
+				console.log(cookies.jwt);
 				const response = await instance.get('/board/allByUser', {
-					headers: { authorizations: cookies.user.token },
+					headers: { authorizations: cookies.jwt.token },
 				});
 				setBoards(response.data);
 			} catch (error) {

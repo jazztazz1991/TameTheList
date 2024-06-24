@@ -31,7 +31,8 @@ router.post('/create', verifyToken, async (req, res) => {
 
 router.get('/allByUser', verifyToken, async (req, res) => {
     try {
-        const user = await UserModel.findById(req.user.id).populate('boards');
+        console.log(req.user.user._id)
+        const user = await UserModel.findById(req.user.user._id).populate('boards');
         res.status(200).json(user.boards);
     } catch (error) {
         res.status(500).json({ error: error.message });

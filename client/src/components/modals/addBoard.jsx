@@ -8,13 +8,13 @@ export function AddBoard() {
 	const [name, setName] = useState('');
 	const [household, setHousehold] = useState('');
 	const [households, setHouseholds] = useState([]);
-	const [cookies] = useCookies(['user']);
+	const [cookies] = useCookies(['jwt']);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
 				const response = await instance.get('/household/all', {
-					headers: { authorizations: cookies.user.token },
+					headers: { authorizations: cookies.jwt.token },
 				});
 				setHouseholds(response.data);
 			} catch (error) {
