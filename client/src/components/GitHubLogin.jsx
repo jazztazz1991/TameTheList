@@ -8,7 +8,7 @@ export default function GithubLogin() {
   const { state, dispatch } = useContext(AuthContext);
   const [data, setData] = useState({ errorMessage: "", isLoading: false });
 
-  const { client_id, redirect_uri } = state;
+  const { client_id, redirect_uri, proxy_url } = state;
 
   useEffect(() => {
     // After requesting Github access, Github redirects back to your app with a code parameter
@@ -25,11 +25,13 @@ export default function GithubLogin() {
         code: newUrl[1]
       };
 
-      const proxy_url = state.proxy_url;
 
       // Use code parameter and other parameters to make POST request to proxy_server
       fetch(proxy_url, {
         method: "POST",
+        header: {
+          'Content-Type': 'application/json' 
+        },
         body: JSON.stringify(requestData)
       })
         .then(response => response.json())
@@ -66,9 +68,6 @@ export default function GithubLogin() {
               </div>
             ) : (
               <>
-                {
-                  // Link to request GitHub access
-                }
                 <a
                   className="login-link"
                   href={`https://github.com/login/oauth/authorize?scope=user&client_id=${client_id}&redirect_uri=${redirect_uri}`}

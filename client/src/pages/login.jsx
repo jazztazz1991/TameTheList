@@ -6,7 +6,7 @@ import instance from '../hooks/API.js';
 import axios from 'axios';
 import GLogin from '../components/GLogin.jsx';
 import GithubLogin from '../components/GitHubLogin.jsx';
-
+import GoogleAuth from '../components/GoogleAuthTest/googleauth.jsx';
 export const Login = () => {
 	const [cookies, setCookie, removeCookie] = useCookies(['user']);
 	const [user, setUser] = useState({});
@@ -82,7 +82,7 @@ export const Login = () => {
 					>
 						Login
 					</button>
-					<GLogin />
+					<GoogleAuth />
 					<GithubLogin />
 					{/* <GoogleLogin onSuccess={(user) => console.log(user)} onError={console.log("Google Login Failed")} /> */}
 				</form>

@@ -21,7 +21,7 @@ export default function Login() {
 
     if (isMatch) {
       const accessToken = isMatch[1];
-      Cookies.set("access_token", accessToken);
+      Cookies.set("access_token", accessToken, { expires: 1}); // Expires in 1 day
       setIsLoggedin(true);
     }
   }, []);
@@ -35,7 +35,6 @@ export default function Login() {
   return (
     <div className="root">
       <div>
-        <h1>Log in with Google</h1>
         <div className="btn-container">
           <button className="btn btn-primary" onClick={handleClick}>
             <svg

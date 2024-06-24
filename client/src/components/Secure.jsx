@@ -22,7 +22,7 @@ export default function Secure() {
     }
 
     getUserDetails(accessToken);
-  }, [cookies, navigate]);
+  }, [cookies]);
 
   return (
     <>
