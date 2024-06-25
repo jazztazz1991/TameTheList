@@ -1,4 +1,4 @@
-const { User, Board, Household, Task, Team } = require("../models");
+const { User, Board, Household, Task } = require("../models");
 
 const userController = {
   // get all users
@@ -17,10 +17,9 @@ const userController = {
     try {
       const dbUserData = await User.findOne({ _id: req.params.userId })
         .select("-__v")
-        .populate("board")
-        .populate("household")
-        .populate("task")
-        .populate("team");
+        .populate("households")
+        .populate("boards")
+        .populate("tasks");
 
       if (!dbUserData) {
         return res.status(404).json({ message: "No user with this id!" });

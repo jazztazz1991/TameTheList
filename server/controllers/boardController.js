@@ -6,7 +6,7 @@ module.exports = {
     try {
       const boards = await Board.find()
         .populate("household")
-        .populate("user")
+        .populate("members")
         .populate("tasks");
       res.json(boards);
     } catch (err) {
@@ -18,7 +18,7 @@ module.exports = {
     try {
       const board = await Board.findOne({ _id: req.params.boardId })
         .populate("household")
-        .populate("user")
+        .populate("members")
         .populate("tasks");
 
       if (!board) {
