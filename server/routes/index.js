@@ -1,9 +1,11 @@
 const router = require("express").Router();
 const apiRoutes = require("./api");
-const dashboardRoutes = require("./dashboardRoutes");
 
-router.use("/");
+// Define a default route if needed
+router.get("/", (req, res) => {
+  res.send("Welcome to the API");
+});
+
 router.use("/api", apiRoutes);
-router.use("/me", dashboardRoutes);
 
 module.exports = router;

@@ -65,4 +65,4 @@ const boardSchema = new Schema(
   }
 );
 
-module.exports = boardSchema;
+module.exports = mongoose.model("Board", boardSchema);

@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Board 1",
+    "household": "60d0fe4f5311236168a109ca",
+    "members": ["60d0fe4f5311236168a109cb", "60d0fe4f5311236168a109cc"],
+    "tasks": ["60d0fe4f5311236168a109cd"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 10,
+            "subCategories": [
+              {
+                "name": "Cleaning",
+                "totalTasks": 5,
+                "avgTime": 30,
+                "fastestTime": 20
+              },
+              {
+                "name": "Shopping",
+                "totalTasks": 5,
+                "avgTime": 45,
+                "fastestTime": 35
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-01T00:00:00Z"
+  },
+  {
+    "name": "Board 2",
+    "household": "60d0fe4f5311236168a109cb",
+    "members": ["60d0fe4f5311236168a109cc", "60d0fe4f5311236168a109cd"],
+    "tasks": ["60d0fe4f5311236168a109ce"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 8,
+            "subCategories": [
+              {
+                "name": "Laundry",
+                "totalTasks": 4,
+                "avgTime": 40,
+                "fastestTime": 25
+              },
+              {
+                "name": "Cooking",
+                "totalTasks": 4,
+                "avgTime": 50,
+                "fastestTime": 30
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-02T00:00:00Z"
+  },
+  {
+    "name": "Board 3",
+    "household": "60d0fe4f5311236168a109cc",
+    "members": ["60d0fe4f5311236168a109cd", "60d0fe4f5311236168a109ce"],
+    "tasks": ["60d0fe4f5311236168a109cf"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 12,
+            "subCategories": [
+              {
+                "name": "Gardening",
+                "totalTasks": 6,
+                "avgTime": 20,
+                "fastestTime": 15
+              },
+              {
+                "name": "Cleaning",
+                "totalTasks": 6,
+                "avgTime": 30,
+                "fastestTime": 25
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-03T00:00:00Z"
+  },
+  {
+    "name": "Board 4",
+    "household": "60d0fe4f5311236168a109cd",
+    "members": ["60d0fe4f5311236168a109ce", "60d0fe4f5311236168a109cf"],
+    "tasks": ["60d0fe4f5311236168a109d0"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 7,
+            "subCategories": [
+              {
+                "name": "Shopping",
+                "totalTasks": 3,
+                "avgTime": 25,
+                "fastestTime": 20
+              },
+              {
+                "name": "Repair",
+                "totalTasks": 4,
+                "avgTime": 35,
+                "fastestTime": 30
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-04T00:00:00Z"
+  },
+  {
+    "name": "Board 5",
+    "household": "60d0fe4f5311236168a109ce",
+    "members": ["60d0fe4f5311236168a109cf", "60d0fe4f5311236168a109d0"],
+    "tasks": ["60d0fe4f5311236168a109d1"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 15,
+            "subCategories": [
+              {
+                "name": "Cooking",
+                "totalTasks": 10,
+                "avgTime": 45,
+                "fastestTime": 30
+              },
+              {
+                "name": "Laundry",
+                "totalTasks": 5,
+                "avgTime": 60,
+                "fastestTime": 50
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-05T00:00:00Z"
+  },
+  {
+    "name": "Board 6",
+    "household": "60d0fe4f5311236168a109cf",
+    "members": ["60d0fe4f5311236168a109d0", "60d0fe4f5311236168a109d1"],
+    "tasks": ["60d0fe4f5311236168a109d2"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 11,
+            "subCategories": [
+              {
+                "name": "Gardening",
+                "totalTasks": 6,
+                "avgTime": 40,
+                "fastestTime": 35
+              },
+              {
+                "name": "Repair",
+                "totalTasks": 5,
+                "avgTime": 50,
+                "fastestTime": 45
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-06T00:00:00Z"
+  },
+  {
+    "name": "Board 7",
+    "household": "60d0fe4f5311236168a109d0",
+    "members": ["60d0fe4f5311236168a109d1", "60d0fe4f5311236168a109d2"],
+    "tasks": ["60d0fe4f5311236168a109d3"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 6,
+            "subCategories": [
+              {
+                "name": "Shopping",
+                "totalTasks": 3,
+                "avgTime": 25,
+                "fastestTime": 20
+              },
+              {
+                "name": "Cleaning",
+                "totalTasks": 3,
+                "avgTime": 30,
+                "fastestTime": 25
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-07T00:00:00Z"
+  },
+  {
+    "name": "Board 8",
+    "household": "60d0fe4f5311236168a109d1",
+    "members": ["60d0fe4f5311236168a109d2", "60d0fe4f5311236168a109d3"],
+    "tasks": ["60d0fe4f5311236168a109d4"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 9,
+            "subCategories": [
+              {
+                "name": "Cooking",
+                "totalTasks": 4,
+                "avgTime": 40,
+                "fastestTime": 30
+              },
+              {
+                "name": "Laundry",
+                "totalTasks": 5,
+                "avgTime": 60,
+                "fastestTime": 50
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-08T00:00:00Z"
+  },
+  {
+    "name": "Board 9",
+    "household": "60d0fe4f5311236168a109d2",
+    "members": ["60d0fe4f5311236168a109d3", "60d0fe4f5311236168a109d4"],
+    "tasks": ["60d0fe4f5311236168a109d5"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 13,
+            "subCategories": [
+              {
+                "name": "Cleaning",
+                "totalTasks": 8,
+                "avgTime": 30,
+                "fastestTime": 20
+              },
+              {
+                "name": "Repair",
+                "totalTasks": 5,
+                "avgTime": 50,
+                "fastestTime": 40
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-09T00:00:00Z"
+  },
+  {
+    "name": "Board 10",
+    "household": "60d0fe4f5311236168a109d3",
+    "members": ["60d0fe4f5311236168a109d4", "60d0fe4f5311236168a109d5"],
+    "tasks": ["60d0fe4f5311236168a109d6"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 10,
+            "subCategories": [
+              {
+                "name": "Shopping",
+                "totalTasks": 5,
+                "avgTime": 45,
+                "fastestTime": 35
+              },
+              {
+                "name": "Cooking",
+                "totalTasks": 5,
+                "avgTime": 40,
+                "fastestTime": 30
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-10T00:00:00Z"
+  },
+  {
+    "name": "Board 11",
+    "household": "60d0fe4f5311236168a109d4",
+    "members": ["60d0fe4f5311236168a109d5", "60d0fe4f5311236168a109d6"],
+    "tasks": ["60d0fe4f5311236168a109d7"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 9,
+            "subCategories": [
+              {
+                "name": "Cleaning",
+                "totalTasks": 4,
+                "avgTime": 35,
+                "fastestTime": 25
+              },
+              {
+                "name": "Repair",
+                "totalTasks": 5,
+                "avgTime": 50,
+                "fastestTime": 40
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-11T00:00:00Z"
+  },
+  {
+    "name": "Board 12",
+    "household": "60d0fe4f5311236168a109d5",
+    "members": ["60d0fe4f5311236168a109d6", "60d0fe4f5311236168a109d7"],
+    "tasks": ["60d0fe4f5311236168a109d8"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 12,
+            "subCategories": [
+              {
+                "name": "Gardening",
+                "totalTasks": 6,
+                "avgTime": 40,
+                "fastestTime": 35
+              },
+              {
+                "name": "Shopping",
+                "totalTasks": 6,
+                "avgTime": 45,
+                "fastestTime": 35
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-12T00:00:00Z"
+  },
+  {
+    "name": "Board 13",
+    "household": "60d0fe4f5311236168a109d6",
+    "members": ["60d0fe4f5311236168a109d7", "60d0fe4f5311236168a109d8"],
+    "tasks": ["60d0fe4f5311236168a109d9"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 8,
+            "subCategories": [
+              {
+                "name": "Cooking",
+                "totalTasks": 4,
+                "avgTime": 40,
+                "fastestTime": 30
+              },
+              {
+                "name": "Cleaning",
+                "totalTasks": 4,
+                "avgTime": 35,
+                "fastestTime": 25
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-13T00:00:00Z"
+  },
+  {
+    "name": "Board 14",
+    "household": "60d0fe4f5311236168a109d7",
+    "members": ["60d0fe4f5311236168a109d8", "60d0fe4f5311236168a109d9"],
+    "tasks": ["60d0fe4f5311236168a109da"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 7,
+            "subCategories": [
+              {
+                "name": "Laundry",
+                "totalTasks": 4,
+                "avgTime": 60,
+                "fastestTime": 50
+              },
+              {
+                "name": "Gardening",
+                "totalTasks": 3,
+                "avgTime": 40,
+                "fastestTime": 30
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-14T00:00:00Z"
+  },
+  {
+    "name": "Board 15",
+    "household": "60d0fe4f5311236168a109d8",
+    "members": ["60d0fe4f5311236168a109d9", "60d0fe4f5311236168a109da"],
+    "tasks": ["60d0fe4f5311236168a109db"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 10,
+            "subCategories": [
+              {
+                "name": "Shopping",
+                "totalTasks": 5,
+                "avgTime": 45,
+                "fastestTime": 35
+              },
+              {
+                "name": "Cleaning",
+                "totalTasks": 5,
+                "avgTime": 35,
+                "fastestTime": 25
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-15T00:00:00Z"
+  },
+  {
+    "name": "Board 16",
+    "household": "60d0fe4f5311236168a109d9",
+    "members": ["60d0fe4f5311236168a109da", "60d0fe4f5311236168a109db"],
+    "tasks": ["60d0fe4f5311236168a109dc"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 12,
+            "subCategories": [
+              {
+                "name": "Cooking",
+                "totalTasks": 6,
+                "avgTime": 40,
+                "fastestTime": 30
+              },
+              {
+                "name": "Laundry",
+                "totalTasks": 6,
+                "avgTime": 60,
+                "fastestTime": 50
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-16T00:00:00Z"
+  },
+  {
+    "name": "Board 17",
+    "household": "60d0fe4f5311236168a109da",
+    "members": ["60d0fe4f5311236168a109db", "60d0fe4f5311236168a109dc"],
+    "tasks": ["60d0fe4f5311236168a109dd"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 11,
+            "subCategories": [
+              {
+                "name": "Gardening",
+                "totalTasks": 6,
+                "avgTime": 40,
+                "fastestTime": 30
+              },
+              {
+                "name": "Repair",
+                "totalTasks": 5,
+                "avgTime": 50,
+                "fastestTime": 40
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-17T00:00:00Z"
+  },
+  {
+    "name": "Board 18",
+    "household": "60d0fe4f5311236168a109db",
+    "members": ["60d0fe4f5311236168a109dc", "60d0fe4f5311236168a109dd"],
+    "tasks": ["60d0fe4f5311236168a109de"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 9,
+            "subCategories": [
+              {
+                "name": "Cleaning",
+                "totalTasks": 4,
+                "avgTime": 35,
+                "fastestTime": 25
+              },
+              {
+                "name": "Shopping",
+                "totalTasks": 5,
+                "avgTime": 45,
+                "fastestTime": 35
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-18T00:00:00Z"
+  },
+  {
+    "name": "Board 19",
+    "household": "60d0fe4f5311236168a109dc",
+    "members": ["60d0fe4f5311236168a109dd", "60d0fe4f5311236168a109de"],
+    "tasks": ["60d0fe4f5311236168a109df"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 10,
+            "subCategories": [
+              {
+                "name": "Laundry",
+                "totalTasks": 5,
+                "avgTime": 60,
+                "fastestTime": 50
+              },
+              {
+                "name": "Cooking",
+                "totalTasks": 5,
+                "avgTime": 40,
+                "fastestTime": 30
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-19T00:00:00Z"
+  },
+  {
+    "name": "Board 20",
+    "household": "60d0fe4f5311236168a109dd",
+    "members": ["60d0fe4f5311236168a109de", "60d0fe4f5311236168a109df"],
+    "tasks": ["60d0fe4f5311236168a109e0"],
+    "stats": [
+      {
+        "category": [
+          {
+            "totalTasks": 14,
+            "subCategories": [
+              {
+                "name": "Gardening",
+                "totalTasks": 7,
+                "avgTime": 40,
+                "fastestTime": 30
+              },
+              {
+                "name": "Shopping",
+                "totalTasks": 7,
+                "avgTime": 45,
+                "fastestTime": 35
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dateCreated": "2023-01-20T00:00:00Z"
+  }
+]

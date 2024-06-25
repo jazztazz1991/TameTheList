@@ -33,4 +33,4 @@ const householdSchema = new Schema(
   }
 );
 
-module.exports = householdSchema;
+module.exports = mongoose.model("Household", householdSchema);

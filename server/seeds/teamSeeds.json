@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Team 1",
+    "description": "Description of Team 1",
+    "dateCreated": "2023-01-01T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109cb", "60d0fe4f5311236168a109cc"]
+  },
+  {
+    "name": "Team 2",
+    "description": "Description of Team 2",
+    "dateCreated": "2023-01-02T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109cd", "60d0fe4f5311236168a109ce"]
+  },
+  {
+    "name": "Team 3",
+    "description": "Description of Team 3",
+    "dateCreated": "2023-01-03T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109cf", "60d0fe4f5311236168a109d0"]
+  },
+  {
+    "name": "Team 4",
+    "description": "Description of Team 4",
+    "dateCreated": "2023-01-04T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109d1", "60d0fe4f5311236168a109d2"]
+  },
+  {
+    "name": "Team 5",
+    "description": "Description of Team 5",
+    "dateCreated": "2023-01-05T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109d3", "60d0fe4f5311236168a109d4"]
+  },
+  {
+    "name": "Team 6",
+    "description": "Description of Team 6",
+    "dateCreated": "2023-01-06T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109d5", "60d0fe4f5311236168a109d6"]
+  },
+  {
+    "name": "Team 7",
+    "description": "Description of Team 7",
+    "dateCreated": "2023-01-07T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109d7", "60d0fe4f5311236168a109d8"]
+  },
+  {
+    "name": "Team 8",
+    "description": "Description of Team 8",
+    "dateCreated": "2023-01-08T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109d9", "60d0fe4f5311236168a109da"]
+  },
+  {
+    "name": "Team 9",
+    "description": "Description of Team 9",
+    "dateCreated": "2023-01-09T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109db", "60d0fe4f5311236168a109dc"]
+  },
+  {
+    "name": "Team 10",
+    "description": "Description of Team 10",
+    "dateCreated": "2023-01-10T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109dd", "60d0fe4f5311236168a109de"]
+  },
+  {
+    "name": "Team 11",
+    "description": "Description of Team 11",
+    "dateCreated": "2023-01-11T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109df", "60d0fe4f5311236168a109e0"]
+  },
+  {
+    "name": "Team 12",
+    "description": "Description of Team 12",
+    "dateCreated": "2023-01-12T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109e1", "60d0fe4f5311236168a109e2"]
+  },
+  {
+    "name": "Team 13",
+    "description": "Description of Team 13",
+    "dateCreated": "2023-01-13T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109e3", "60d0fe4f5311236168a109e4"]
+  },
+  {
+    "name": "Team 14",
+    "description": "Description of Team 14",
+    "dateCreated": "2023-01-14T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109e5", "60d0fe4f5311236168a109e6"]
+  },
+  {
+    "name": "Team 15",
+    "description": "Description of Team 15",
+    "dateCreated": "2023-01-15T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109e7", "60d0fe4f5311236168a109e8"]
+  },
+  {
+    "name": "Team 16",
+    "description": "Description of Team 16",
+    "dateCreated": "2023-01-16T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109e9", "60d0fe4f5311236168a109ea"]
+  },
+  {
+    "name": "Team 17",
+    "description": "Description of Team 17",
+    "dateCreated": "2023-01-17T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109eb", "60d0fe4f5311236168a109ec"]
+  },
+  {
+    "name": "Team 18",
+    "description": "Description of Team 18",
+    "dateCreated": "2023-01-18T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109ed", "60d0fe4f5311236168a109ee"]
+  },
+  {
+    "name": "Team 19",
+    "description": "Description of Team 19",
+    "dateCreated": "2023-01-19T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109ef", "60d0fe4f5311236168a109f0"]
+  },
+  {
+    "name": "Team 20",
+    "description": "Description of Team 20",
+    "dateCreated": "2023-01-20T00:00:00Z",
+    "members": ["60d0fe4f5311236168a109f1", "60d0fe4f5311236168a109f2"]
+  }
+]

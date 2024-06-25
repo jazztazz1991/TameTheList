@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Household 1",
+    "members": ["60d0fe4f5311236168a109cb", "60d0fe4f5311236168a109cc"],
+    "boards": ["60d0fe4f5311236168a109cd"],
+    "dateCreated": "2023-01-01T00:00:00Z"
+  },
+  {
+    "name": "Household 2",
+    "members": ["60d0fe4f5311236168a109d1", "60d0fe4f5311236168a109d2"],
+    "boards": ["60d0fe4f5311236168a109d3"],
+    "dateCreated": "2023-01-02T00:00:00Z"
+  },
+  {
+    "name": "Household 3",
+    "members": ["60d0fe4f5311236168a109d3", "60d0fe4f5311236168a109d4"],
+    "boards": ["60d0fe4f5311236168a109d5"],
+    "dateCreated": "2023-01-03T00:00:00Z"
+  },
+  {
+    "name": "Household 4",
+    "members": ["60d0fe4f5311236168a109d4", "60d0fe4f5311236168a109d5"],
+    "boards": ["60d0fe4f5311236168a109d6"],
+    "dateCreated": "2023-01-04T00:00:00Z"
+  },
+  {
+    "name": "Household 5",
+    "members": ["60d0fe4f5311236168a109d5", "60d0fe4f5311236168a109d6"],
+    "boards": ["60d0fe4f5311236168a109d7"],
+    "dateCreated": "2023-01-05T00:00:00Z"
+  },
+  {
+    "name": "Household 6",
+    "members": ["60d0fe4f5311236168a109d6", "60d0fe4f5311236168a109d7"],
+    "boards": ["60d0fe4f5311236168a109d8"],
+    "dateCreated": "2023-01-06T00:00:00Z"
+  },
+  {
+    "name": "Household 7",
+    "members": ["60d0fe4f5311236168a109d7", "60d0fe4f5311236168a109d8"],
+    "boards": ["60d0fe4f5311236168a109d9"],
+    "dateCreated": "2023-01-07T00:00:00Z"
+  },
+  {
+    "name": "Household 8",
+    "members": ["60d0fe4f5311236168a109d8", "60d0fe4f5311236168a109d9"],
+    "boards": ["60d0fe4f5311236168a109da"],
+    "dateCreated": "2023-01-08T00:00:00Z"
+  },
+  {
+    "name": "Household 9",
+    "members": ["60d0fe4f5311236168a109d9", "60d0fe4f5311236168a109da"],
+    "boards": ["60d0fe4f5311236168a109db"],
+    "dateCreated": "2023-01-09T00:00:00Z"
+  },
+  {
+    "name": "Household 10",
+    "members": ["60d0fe4f5311236168a109da", "60d0fe4f5311236168a109db"],
+    "boards": ["60d0fe4f5311236168a109dc"],
+    "dateCreated": "2023-01-10T00:00:00Z"
+  },
+  {
+    "name": "Household 11",
+    "members": ["60d0fe4f5311236168a109db", "60d0fe4f5311236168a109dc"],
+    "boards": ["60d0fe4f5311236168a109dd"],
+    "dateCreated": "2023-01-11T00:00:00Z"
+  },
+  {
+    "name": "Household 12",
+    "members": ["60d0fe4f5311236168a109dc", "60d0fe4f5311236168a109dd"],
+    "boards": ["60d0fe4f5311236168a109de"],
+    "dateCreated": "2023-01-12T00:00:00Z"
+  },
+  {
+    "name": "Household 13",
+    "members": ["60d0fe4f5311236168a109dd", "60d0fe4f5311236168a109de"],
+    "boards": ["60d0fe4f5311236168a109df"],
+    "dateCreated": "2023-01-13T00:00:00Z"
+  },
+  {
+    "name": "Household 14",
+    "members": ["60d0fe4f5311236168a109de", "60d0fe4f5311236168a109df"],
+    "boards": ["60d0fe4f5311236168a109e0"],
+    "dateCreated": "2023-01-14T00:00:00Z"
+  },
+  {
+    "name": "Household 15",
+    "members": ["60d0fe4f5311236168a109df", "60d0fe4f5311236168a109e0"],
+    "boards": ["60d0fe4f5311236168a109e1"],
+    "dateCreated": "2023-01-15T00:00:00Z"
+  },
+  {
+    "name": "Household 16",
+    "members": ["60d0fe4f5311236168a109e0", "60d0fe4f5311236168a109e1"],
+    "boards": ["60d0fe4f5311236168a109e2"],
+    "dateCreated": "2023-01-16T00:00:00Z"
+  },
+  {
+    "name": "Household 17",
+    "members": ["60d0fe4f5311236168a109e1", "60d0fe4f5311236168a109e2"],
+    "boards": ["60d0fe4f5311236168a109e3"],
+    "dateCreated": "2023-01-17T00:00:00Z"
+  },
+  {
+    "name": "Household 18",
+    "members": ["60d0fe4f5311236168a109e2", "60d0fe4f5311236168a109e3"],
+    "boards": ["60d0fe4f5311236168a109e4"],
+    "dateCreated": "2023-01-18T00:00:00Z"
+  },
+  {
+    "name": "Household 19",
+    "members": ["60d0fe4f5311236168a109e3", "60d0fe4f5311236168a109e4"],
+    "boards": ["60d0fe4f5311236168a109e5"],
+    "dateCreated": "2023-01-19T00:00:00Z"
+  },
+  {
+    "name": "Household 20",
+    "members": ["60d0fe4f5311236168a109e4", "60d0fe4f5311236168a109e5"],
+    "boards": ["60d0fe4f5311236168a109e6"],
+    "dateCreated": "2023-01-20T00:00:00Z"
+  }
+]

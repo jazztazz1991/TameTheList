@@ -3,7 +3,6 @@ const dotenv = require("dotenv");
 const passport = require("passport");
 const session = require("express-session");
 const routes = require("./routes");
-
 const path = require("path");
 const db = require("./config/db");
 
@@ -14,7 +13,6 @@ dotenv.config({ path: path.resolve(__dirname, "../.env") });
 const app = express();
 
 app.use(express.json()); //sets all data given from the front end in the form of a JSON file.
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(
