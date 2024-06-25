@@ -1,23 +1,33 @@
-import mongoose from 'mongoose';
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-const teamSchema = new mongoose.Schema({
+const teamSchema = new Schema(
+  {
     name: {
-        type: String,
-        required: true,
-        trim: true
+      type: String,
+      required: true,
+      trim: true,
     },
     description: {
-        type: String,
-        trim: true
+      type: String,
+      trim: true,
     },
     dateCreated: {
-        type: Date,
-        default: Date.now
+      type: Date,
+      default: Date.now,
     },
-    members: [{
+    members: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users'
-    }]
-});
+        ref: "user",
+      },
+    ],
+  },
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  }
+);
 
-const TeamModel = mongoose.model('team', teamSchema);
+module.exports = teamSchema;
