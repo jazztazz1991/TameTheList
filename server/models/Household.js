@@ -1,24 +1,36 @@
-import mongoose from 'mongoose';
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-const HouseholdSchema = new mongoose.Schema({
+const householdSchema = new Schema(
+  {
     name: {
-        type: String,
-        required: true,
-        trim: true
+      type: String,
+      required: true,
+      trim: true,
     },
-    members: [{
+    members: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users',
-        required: true
-    }],
-    boards: [{
+        ref: "user",
+        required: true,
+      },
+    ],
+    boards: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'board',
-    }],
+        ref: "board",
+      },
+    ],
     dateCreated: {
-        type: Date,
-        default: Date.now
-    }
-});
+      type: Date,
+      default: Date.now,
+    },
+  },
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  }
+);
 
-export const HouseholdModel = mongoose.model('household', HouseholdSchema);
+module.exports = mongoose.model("Household", householdSchema);

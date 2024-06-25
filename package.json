@@ -8,7 +8,8 @@
     "install": "concurrently \"cd server && npm i\" \" cd client && npm i\"",
     "start": "node ./server/server.js",
     "prod": "NODE_ENV=production nodemon server.js",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "seed": "node server/seeds/seeder.js"
   },
   "author": "",
   "license": "ISC",

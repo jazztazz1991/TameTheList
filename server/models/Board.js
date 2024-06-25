@@ -1,50 +1,68 @@
-import mongoose from 'mongoose';
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-const BoardSchema = new mongoose.Schema({
+const boardSchema = new Schema(
+  {
     name: {
-        type: String,
-        required: true,
-        trim: true
+      type: String,
+      required: true,
+      trim: true,
     },
     household: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'household',
-        required: true
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "household",
+      required: true,
     },
-    members: [{
+    members: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users',
-        required: true
-    }],
-    tasks: [{
+        ref: "user",
+        required: true,
+      },
+    ],
+    tasks: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'task'
-    }],
-    stats: [{
-        catergory: [{
+        ref: "task",
+      },
+    ],
+    stats: [
+      {
+        category: [
+          {
             totalTasks: {
-                type: Number,
+              type: Number,
             },
-            subCategories: [{
+            subCategories: [
+              {
                 name: {
-                    type: String,
+                  type: String,
                 },
                 totalTasks: {
-                    type: Number,
+                  type: Number,
                 },
                 avgTime: {
-                    type: Number,
+                  type: Number,
                 },
                 fastestTime: {
-                    type: Number,
-                }
-            }]
-        }]
-    }],
+                  type: Number,
+                },
+              },
+            ],
+          },
+        ],
+      },
+    ],
     dateCreated: {
-        type: Date,
-        default: Date.now
-    }
-});
+      type: Date,
+      default: Date.now,
+    },
+  },
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  }
+);
 
-export const BoardModel = mongoose.model('board', BoardSchema);
+module.exports = mongoose.model("Board", boardSchema);
