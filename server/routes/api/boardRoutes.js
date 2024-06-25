@@ -7,10 +7,11 @@ const {
   deleteBoard,
 } = require("../../controllers/boardController");
 
-// get boards tested in Postman at June 25 7:27PM EST
+// getBoards tested in Postman at June 25 7:27PM EST
 // /api/boards
 router.route("/").get(getBoards).post(createBoard);
 
+// getSingleBoard tested in Postman at June 25 7:37PM EST
 // /api/boards/:boardId
 router
   .route("/:boardId")

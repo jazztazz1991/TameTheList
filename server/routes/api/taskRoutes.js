@@ -11,6 +11,7 @@ const {
 // /api/tasks
 router.route("/").get(getTasks).post(createTask);
 
+// getSingleTask tested in postman on June 25 7:39PM EST
 // /api/tasks/:taskId
 router.route("/:taskId").get(getSingleTask).put(updateTask).delete(deleteTask);
 
