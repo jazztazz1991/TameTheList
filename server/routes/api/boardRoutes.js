@@ -5,8 +5,9 @@ const {
   createBoard,
   updateBoard,
   deleteBoard,
-} = require("../../controllers/boardController.js");
+} = require("../../controllers/boardController");
 
+// get boards tested in Postman at June 25 7:27PM EST
 // /api/boards
 router.route("/").get(getBoards).post(createBoard);
 

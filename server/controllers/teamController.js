@@ -4,7 +4,7 @@ module.exports = {
   // Get all teams
   async getTeams(req, res) {
     try {
-      const teams = await Team.find().populate("user");
+      const teams = await Team.find().populate("members");
       res.json(teams);
     } catch (err) {
       res.status(500).json(err);
@@ -15,7 +15,7 @@ module.exports = {
     try {
       const team = await Team.findOne({
         _id: req.params.teamId,
-      }).populate("user");
+      }).populate("members");
 
       if (!team) {
         return res.status(404).json({ message: "No team with that ID" });

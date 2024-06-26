@@ -5,8 +5,9 @@ const {
   createTask,
   updateTask,
   deleteTask,
-} = require("../../controllers/taskController.js");
+} = require("../../controllers/taskController");
 
+// getTasks tested in postman on June 25 7:22PM EST
 // /api/tasks
 router.route("/").get(getTasks).post(createTask);
 

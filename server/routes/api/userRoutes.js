@@ -6,6 +6,7 @@ const {
   deleteUser,
 } = require("../../controllers/userController");
 
+// getUsers tested in Postman June 25 7:21 PM EST
 // /api/users
 router.route("/").get(getUsers).post(createUser);
 

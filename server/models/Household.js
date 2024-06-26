@@ -11,14 +11,14 @@ const householdSchema = new Schema(
     members: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user",
+        ref: "User",
         required: true,
       },
     ],
     boards: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "board",
+        ref: "Board",
       },
     ],
     dateCreated: {

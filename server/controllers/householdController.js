@@ -1,10 +1,11 @@
-const { Household, User } = require("../models");
+const { Household } = require("../models");
 
 module.exports = {
   // Get all households
   async getHouseholds(req, res) {
     try {
       const households = await Household.find()
+        // .populate is for the attributes, not the models! use the attribute key name!
         .populate("members")
         .populate("boards");
       res.json(households);

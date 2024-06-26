@@ -30,19 +30,19 @@ const userSchema = new Schema(
     households: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "household",
+        ref: "Household",
       },
     ],
     boards: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "board",
+        ref: "Board",
       },
     ],
     tasks: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "task",
+        ref: "Task",
       },
     ],
     lastLoggedIn: {

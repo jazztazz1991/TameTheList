@@ -1,13 +1,10 @@
-const { Task, User } = require("../models");
+const { Task } = require("../models");
 
 module.exports = {
   // Get all tasks
   async getTasks(req, res) {
     try {
-      const tasks = await Task.find()
-        .populate("board")
-        .populate("assignedTo")
-        .populate("subtasks");
+      const tasks = await Task.find().populate("board").populate("assignedTo");
       res.json(tasks);
     } catch (err) {
       res.status(500).json(err);
@@ -20,8 +17,7 @@ module.exports = {
         _id: req.params.taskId,
       })
         .populate("board")
-        .populate("assignedTo")
-        .populate("subtasks");
+        .populate("assignedTo");
 
       if (!task) {
         return res.status(404).json({ message: "No task with that ID" });

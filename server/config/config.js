@@ -1,8 +1,7 @@
 const dotenv = require("dotenv");
 
 dotenv.config(); // Load environment variables from .env file
-console.log("config.js process env");
-console.log(process.env);
+
 const config = {
   mongoURI: process.env.MONGODB_URI,
   client_id: process.env.GOOGLE_CLIENT_ID,

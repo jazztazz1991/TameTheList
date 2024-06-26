@@ -10,20 +10,20 @@ const boardSchema = new Schema(
     },
     household: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "household",
+      ref: "Household",
       required: true,
     },
     members: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user",
+        ref: "User",
         required: true,
       },
     ],
     tasks: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "task",
+        ref: "Task",
       },
     ],
     stats: [
