@@ -8,6 +8,7 @@ const {
 } = require("../../controllers/boardController");
 
 // getBoards tested in Postman at June 25 7:27PM EST
+// createBoard tested in Postman at June 25 7:46PM EST
 // /api/boards
 router.route("/").get(getBoards).post(createBoard);
 

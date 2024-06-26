@@ -1,6 +1,6 @@
 const { User, Board, Household, Task } = require("../models");
 
-const userController = {
+module.exports = {
   // get all users
   async getUsers(req, res) {
     try {
@@ -85,5 +85,3 @@ const userController = {
     }
   },
 };
-
-module.exports = userController;
