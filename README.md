@@ -123,21 +123,24 @@ Once the app is functional, screenshots will be added in this section.
   - [ ] Test 5
 
 - [ ] Back End
-  - [x] Test 1
-  - [x] Test 2
-  - [x] Test 3
-  - [x] Test 4
-  - [ ] Test 5
+  - [x] DB connection
+  - [x] Routes
+  - [x] Controllers
+  - [x] Test C
+  - [x] Test R
+  - [ ] Test U
+  - [ ] Test D
 
 See the [open issues](https://github.com/jazztazz1991/TameTheList/issues) for a full list of proposed features (and known issues).
 
 #### Future Development
 
-- [x] Test 1
-- [x] Test 2
-- [x] Test 3
-- [x] Test 4
-- [ ] Test 5
+- [ ] Add "Teams" functionality to both front and back end
+  - [ ] Front End
+  - [ ] Back End
+- [ ] Add Google Auth w/ Passport.js
+  - [ ] Front End
+  - [ ] Back End
 
 <!-- CONTRIBUTING -->
 
