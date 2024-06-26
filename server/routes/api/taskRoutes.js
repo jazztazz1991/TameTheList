@@ -8,6 +8,7 @@ const {
 } = require("../../controllers/taskController");
 
 // getTasks tested in postman on June 25 7:22PM EST
+// createTask tested in postman on June 25 8:02PM EST
 // /api/tasks
 router.route("/").get(getTasks).post(createTask);
 

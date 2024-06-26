@@ -7,6 +7,7 @@ const {
   deleteHousehold,
 } = require("../../controllers/householdController");
 // getHouseholds tested 6/25 at 7:20PM EST
+// createHousehold tested 6/25 at 7:51PM EST
 // /api/households
 router.route("/").get(getHouseholds).post(createHousehold);
 
