@@ -10,6 +10,7 @@ const {
 // /api/users
 router.route("/").get(getUsers).post(createUser);
 
+// getSingleUser tested in Postman June 25 7:40 PM EST
 // /api/users/:userId
 router.route("/:userId").get(getSingleUser).delete(deleteUser);
 
