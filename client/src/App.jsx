@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
+import { AuthProvider } from "./components/AuthContext"; // Ensure AuthProvider is imported
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
 const authLink = () => {
@@ -20,9 +21,11 @@ const authLink = () => {
 function App() {
   return (
     <>
-      <Header />
-      <Outlet authLink={authLink} />
-      <Footer />
+      <AuthProvider>
+        <Header />
+        <Outlet authLink={authLink} />
+        <Footer />
+      </AuthProvider>
     </>
   );
 }

@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
-import Auth from "../utils/auth";
+import { loggedIn } from "../utils/auth";
 
 export const Home1 = () => {
-  const isLoggedIn = Auth.loggedIn();
+  const isLoggedIn = loggedIn();
   const navigate = useNavigate();
 
   // Redirect if user is not logged in (optional, based on your application flow)

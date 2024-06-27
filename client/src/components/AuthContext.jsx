@@ -1,6 +1,6 @@
 // src/AuthContext.jsx
-import React, { createContext, useReducer } from 'react';
-import { process } from 'dotenv';
+import { createContext, useReducer } from "react";
+import PropTypes from "prop-types"; // Import PropTypes
 
 const initialState = {
   user: null,
@@ -14,13 +14,13 @@ export const AuthContext = createContext(initialState);
 
 const authReducer = (state, action) => {
   switch (action.type) {
-    case 'LOGIN':
+    case "LOGIN":
       return {
         ...state,
         user: action.payload.user,
         isLoggedIn: action.payload.isLoggedIn,
       };
-    case 'LOGOUT':
+    case "LOGOUT":
       return {
         ...state,
         user: null,
@@ -39,4 +39,8 @@ export const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
+};
+
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired, // Validate children prop as required
 };

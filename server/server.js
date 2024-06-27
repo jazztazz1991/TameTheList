@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
+const cors = require("cors");
 
 const passport = require("passport");
 const session = require("express-session");
@@ -12,6 +13,7 @@ const db = require("./config/db");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+app.use(cors()); // This allows all origins during development
 
 app.use(express.json()); //sets all data given from the front end in the form of a JSON file.
 app.use(express.urlencoded({ extended: true }));
