@@ -1,14 +1,15 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const path = require("path");
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
+
 const passport = require("passport");
 const session = require("express-session");
 const routes = require("./routes");
-const path = require("path");
+
 const db = require("./config/db");
 
 const PORT = process.env.PORT || 3001;
-
-dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(
     saveUninitialized: true,
   })
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
 

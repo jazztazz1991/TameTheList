@@ -65,7 +65,6 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // delete user (BONUS: and delete associated thoughts)
   async deleteUser(req, res) {
     try {
       const dbUserData = await User.findOneAndDelete({
@@ -75,10 +74,8 @@ module.exports = {
       if (!dbUserData) {
         return res.status(404).json({ message: "No user with this id!" });
       }
-      await Board.deleteMany({ _id: { $in: dbUserData.boards } });
-      await Household.deleteMany({ _id: { $in: dbUserData.households } });
-      await Task.deleteMany({ _id: { $in: dbUserData.tasks } });
-      res.json({ message: "User and associated thoughts deleted!" });
+      await Task.deleteMany({ _id: { $in: dbUserData.tasks.assignedTo } });
+      res.json({ message: "User and associated tasks deleted!" });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

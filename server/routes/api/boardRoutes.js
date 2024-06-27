@@ -13,6 +13,8 @@ const {
 router.route("/").get(getBoards).post(createBoard);
 
 // getSingleBoard tested in Postman at June 25 7:37PM EST
+// updateBoard tested in Insomnia at June 27 1:38PM EST
+// deleteBoard tested in Insomnia at June 27 1:46PM EST
 // /api/boards/:boardId
 router
   .route("/:boardId")
