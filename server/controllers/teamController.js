@@ -47,7 +47,7 @@ module.exports = {
         res.status(404).json({ message: "No team with that ID" });
       }
 
-      res.json({ message: "Team and deleted!" });
+      res.json({ message: "Team deleted!" });
     } catch (err) {
       res.status(500).json(err);
     }

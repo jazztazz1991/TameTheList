@@ -48,7 +48,7 @@ module.exports = {
       if (!board) {
         res.status(404).json({ message: "No board with that ID" });
       }
-      res.json(board);
+      res.json({ message: "Board deleted!" });
     } catch (err) {
       res.status(500).json(err);
     }

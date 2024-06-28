@@ -6,17 +6,24 @@ const {
   updateHousehold,
   deleteHousehold,
 } = require("../../controllers/householdController");
-// getHouseholds tested 6/25 at 7:20PM EST
-// createHousehold tested 6/25 at 7:51PM EST
-// /api/households
-router.route("/").get(getHouseholds).post(createHousehold);
+const { verifyToken } = require("../../utils/authMiddleware");
 
-// getSingleHousehold tested 6/25 at 7:38PM EST
+// getHouseholds tested in Postman 6/25 at 7:20PM EST
+// createHousehold tested in Postman 6/25 at 7:51PM EST
+// /api/households
+router
+  .route("/")
+  .get(verifyToken, getHouseholds)
+  .post(verifyToken, createHousehold);
+
+// getSingleHousehold tested in Postman 6/25 at 7:38PM EST
 // /api/households/:householdId
+// updateHousehold tested in Insomnia 6/27 at 1:40PM EST
+// deleteHousehold tested in Insomnia 6/27 at 1:44PM EST
 router
   .route("/:householdId")
-  .get(getSingleHousehold)
-  .put(updateHousehold)
-  .delete(deleteHousehold);
+  .get(verifyToken, getSingleHousehold)
+  .put(verifyToken, updateHousehold)
+  .delete(verifyToken, deleteHousehold);
 
 module.exports = router;

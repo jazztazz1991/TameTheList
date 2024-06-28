@@ -1,4 +1,4 @@
-import Auth from "../utils/auth";
+import { loggedIn, logout } from "/src/utils/auth.js";
 import { Link } from "react-router-dom";
 import "../index.css";
 import logo from "/logo.jpg";
@@ -12,7 +12,7 @@ export const Header = () => {
         <h3 className='text-lg font-semibold  w-fit'>Organize your life</h3>
       </div>
       <nav className='justify-end col-end-4 w-fit'>
-        {Auth.loggedIn ? (
+        {loggedIn ? (
           <Link
             to='/login'
             className='bg-blue-light rounded px-2 mx-2 w-fit shadow-md shadow-cyan-500/50'
@@ -41,7 +41,7 @@ export const Header = () => {
             </Link>
             <button
               className='bg-blue-light rounded px-2 mx-2 w-fit shadow-md shadow-cyan-500/50'
-              onClick={() => Auth.logout()}
+              onClick={() => logout()}
             >
               Logout
             </button>

@@ -32,7 +32,7 @@ const Register = () => {
   const register = async (e) => {
     e.preventDefault();
     try {
-      const res = await instance.post("/auth/register", {
+      const res = await instance.post("/api/users", {
         userInfo,
       });
       navigate("/login");
