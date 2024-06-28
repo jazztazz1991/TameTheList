@@ -44,8 +44,8 @@ export const AddTask = () => {
 			console.log('Creating Task');
 			console.log(task);
 			task.boardId = params.id;
-			await instance.post('/task/create', task, {
-				headers: { authorizations: cookies.user.token },
+			await instance.post('/tasks/', task, {
+				headers: { authorization: cookies.user.token },
 			});
 			setOpenModal(false);
 		} catch (error) {
