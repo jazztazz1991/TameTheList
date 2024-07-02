@@ -4,10 +4,6 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  root: path.resolve(new URL(".", import.meta.url).pathname), // Resolve the root directory
-  build: {
-    outDir: path.resolve(new URL("dist", import.meta.url).pathname), // Specify the output directory
-  },
   resolve: {
     alias: {
       "@": "/src",
